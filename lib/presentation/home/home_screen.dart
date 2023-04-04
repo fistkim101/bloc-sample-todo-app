@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/add_todo_text_field.dart';
 import '../widgets/app_title.dart';
+import '../widgets/filters.dart';
+import '../widgets/search_box.dart';
+import '../widgets/todo_list.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -21,19 +25,19 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 AppTitle(),
-                // AddTodoTextField(),
+                AddTodoTextField(),
                 SizedBox(
                   height: 15,
                 ),
-                // SearchBox(),
+                SearchBox(),
                 SizedBox(
                   height: 15,
                 ),
-                // Filters(),
+                Filters(),
                 SizedBox(
                   height: 15,
                 ),
-                // TodoList(),
+                TodoList(),
               ],
             ),
           ),

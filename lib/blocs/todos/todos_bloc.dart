@@ -25,7 +25,10 @@ class TodosBloc extends Bloc<TodosEvent, TodosState> {
     on<ToggleTodoEvent>((event, emit) {
       List<TodoModel> newTodos = state.todos.map((todo) {
         if (todo.id == event.id) {
-          todo.isCompleted = !todo.isCompleted;
+          return TodoModel(
+              id: todo.id,
+              description: todo.description,
+              isCompleted: !todo.isCompleted);
         }
 
         return todo;
